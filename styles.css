@@ -1,0 +1,137 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+p {
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+}
+
+.container {
+  background-color: var(--white);
+  margin: 0 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.imgs-container {
+  width: 100%;
+}
+
+.imgs-container img {
+  max-width: 100%;
+}
+
+.imgs-container img.desktop-img {
+  display: none;
+}
+
+.details {
+  padding: 20px;
+}
+
+.details .perfume {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.details h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  margin: 10px 0 15px;
+  line-height: 1;
+  color: var(--very-dark-blue)
+}
+
+.details .description {
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.details .price {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 25px 0 15px;
+}
+.details .price .current-price {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--dark-cyan)
+}
+
+.details .price .old-price {
+  color: var(--dark-grayish-blue);
+}
+
+.details .add-btn {
+  width: 100%;
+  border: none;
+  padding: 12px 0;
+  color: white;
+  background-color: var(--dark-cyan);
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px; 
+  transition: .3s;
+  cursor: pointer;
+}
+
+.details .add-btn:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+@media (min-width: 620px) {
+  .imgs-container img.mobile-img {
+    display: none;
+  }
+  .container {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  .container .imgs-container {
+      flex: 50%
+  }
+  .container .details {
+    padding: 30px;
+    flex: 50%;
+  }
+  .container .imgs-container img.desktop-img {
+    height: 100%;
+    display: block;
+  }
+  .details h1 {
+    margin: 20px 0 25px;
+  }
+  .details .price {
+  margin: 25px 0 20px;
+  }
+}
+
+
